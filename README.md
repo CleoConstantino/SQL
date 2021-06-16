@@ -69,6 +69,6 @@ GROUP BY departamentos.id_dept`
 
 **Comandos nas tabelas:**
 
-- CREATE TABLE:
-- ALTER TABLE:
-- DROP TABLE:
+- CREATE TABLE: serve para criar as tabelas do banco: `CREATE TABLE alunos ( matricula  INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, cpf INTEGER UNIQUE, responsavel TEXT)` - outro exemplo: `CREATE TABLE aulas (id_professor INTEGER, matricula INTEGER, FOREIGN KEY(id_professor) REFERENCES professores(id_professor), FOREIGN KEY(matricula) REFERENCES alunos (matricula))`
+- ALTER TABLE: serve para fazer alterações nas tabelas: `ALTER TABLE aluno RENAME TO alunos` - `ALTER TABLE professor RENAME TO professores` - `ALTER TABLE aulas RENAME COLUMN id_aluno TO matricula_aluno`
+- DROP TABLE: serve para excluir uma tabela: `DROP TABLE alunos`
