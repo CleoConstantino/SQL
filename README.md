@@ -57,13 +57,15 @@ Operadores lógicos:
 
 **Comandos avançados:**
 
-- ORDER BY:
-- LIMIT:
-- OFFSET:
-- COUNT:
-- GROUP BY:
-- JOIN, GROUP BY e COUNT juntos:
-- HAVING:
+- ORDER BY: organiza em ordem alfabética o campo selecionado (DESC: decrescente de trás pra frente): `SELECT * FROM professor ORDER BY materia DESC`
+- LIMIT: vai trazer um limite de resultado: `SELECT * FROM aluno LIMIT 2`
+- OFFSET: serve para dizer para o banco qual a quantidade de registros ele vai ignorar (ignora sempre os primeiros registros da lista): `SELECT * FROM funcionarios LIMIT 4 OFFSET 2`
+- COUNT: serve para saber a quantidade de registros: `SELECT COUNT(nome) FROM funcionarios`
+- GROUP BY: mostra quantas vezes se repete o registro, ou seja, agrupa a quantidade de registros iguais: `SELECT id_departamento, count(id_departamento) FROM funcionarios GROUP BY id_departamento` 
+- JOIN, GROUP BY e COUNT juntos: `SELECT departamentos.descricao, count(funcionarios.id_departamento) FROM funcionarios
+JOIN departamentos ON funcionarios.id_departamento = departamento.id_dept
+GROUP BY departamentos.id_dept`
+- HAVING: é usado quando está agrupando os campos, ou seja utilizando o GROUP BY:  SELECT departamentos. descricao, count(funcionarios.id_departamento) FROM funcionarios JOIN departamentos ON funcionarios.id_departamento = departamentos.id_dept GROUP BY departamentos.id_dept HAVING count(funcionarios.id_departamento) >= 2
 
 **Comandos nas tabelas:**
 
