@@ -1,4 +1,4 @@
-Curso de SQL realizado na plataforma da Rocketseat - 06/2021
+## Curso de SQL realizado na plataforma da Rocketseat - 06/2021
 
 **Tipos de campos:**
 - *Text:* texto;
